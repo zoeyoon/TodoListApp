@@ -13,7 +13,7 @@ public class TodoUtil {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("\n"
-				+ "==========Create Item Section\n"
+				+ "========== Create item Section\n"
 				+ "enter the title\n");
 		
 		title = sc.next();
@@ -35,8 +35,8 @@ public class TodoUtil {
 		String title = sc.next();
 		
 		System.out.println("\n"
-				+ "==========Delete Item Section\n"
-				+ "enter the title of  item to remove\n"
+				+ "========== Delete Item Section\n"
+				+ "enter the title of item to remove\n"
 				+ "\n");
 		
 		for (TodoItem item : l.getList()) {
@@ -53,7 +53,7 @@ public class TodoUtil {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("\n"
-				+ "==========Edit Item Section\n"
+				+ "========== Edit Item Section\n"
 				+ "enter the title of the item you want to update\n"
 				+ "\n");
 		String title = sc.next().trim();
