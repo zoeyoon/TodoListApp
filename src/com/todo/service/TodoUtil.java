@@ -16,7 +16,7 @@ public class TodoUtil {
 				+ "========== Create item Section\n"
 				+ "enter the title\n");
 		
-		title = sc.next();
+		title = sc.nextLine();
 		if (list.isDuplicate(title)) {
 			System.out.printf("title can't be duplicate");
 			return;
@@ -32,12 +32,14 @@ public class TodoUtil {
 	public static void deleteItem(TodoList l) {
 		
 		Scanner sc = new Scanner(System.in);
-		String title = sc.next();
+		//String title = sc.next();
 		
 		System.out.println("\n"
 				+ "========== Delete Item Section\n"
 				+ "enter the title of item to remove\n"
 				+ "\n");
+		
+		String title = sc.nextLine();
 		
 		for (TodoItem item : l.getList()) {
 			if (title.equals(item.getTitle())) {
@@ -56,21 +58,21 @@ public class TodoUtil {
 				+ "========== Edit Item Section\n"
 				+ "enter the title of the item you want to update\n"
 				+ "\n");
-		String title = sc.next().trim();
+		String title = sc.nextLine().trim();
 		if (!l.isDuplicate(title)) {
 			System.out.println("title doesn't exist");
 			return;
 		}
 
 		System.out.println("enter the new title of the item");
-		String new_title = sc.next().trim();
+		String new_title = sc.nextLine().trim();
 		if (l.isDuplicate(new_title)) {
 			System.out.println("title can't be duplicate");
 			return;
 		}
 		
 		System.out.println("enter the new description ");
-		String new_description = sc.next().trim();
+		String new_description = sc.nextLine().trim();
 		for (TodoItem item : l.getList()) {
 			if (item.getTitle().equals(title)) {
 				l.deleteItem(item);
