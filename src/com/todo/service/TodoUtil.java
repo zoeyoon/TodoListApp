@@ -114,7 +114,8 @@ public class TodoUtil {
 	}
 	
 	public static void findItem(TodoList l, String word) {
-		System.out.println("======== 키워드 검색 결과 [제목 & 설명] =========");
+		System.out.println("\n"
+				+ "======== 키워드 검색 결과 [제목 & 설명] =========");
 		int count=0;
 		for (TodoItem item : l.getList()) {
 			if (item.getTitle().contains(word) || item.getDesc().contains(word)) {
@@ -127,7 +128,8 @@ public class TodoUtil {
 	}
 	
 	public static void findCateItem(TodoList l, String word) {
-		System.out.println("======== 키워드 검색 결과 [카테고리] =========");
+		System.out.println("\n"
+				+ "======== 키워드 검색 결과 [카테고리] =========");
 		int count=0;
 		for (TodoItem item : l.getList()) {
 			if (item.getCategory().contains(word)) {
@@ -146,7 +148,8 @@ public class TodoUtil {
 			s.add(item.getCategory());
 		}
 		
-		System.out.println("======== 카테고리 목록 =========");
+		System.out.println("\n"
+				+ "======== 카테고리 목록 =========");
 		List<String> lc = new ArrayList<String>();
 		lc.addAll(s);
 		
