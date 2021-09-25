@@ -35,7 +35,7 @@ public class TodoUtil {
 		System.out.print("설명 내용을 입력하세요 > ");
 		desc = sc.nextLine();
 		
-		System.out.print("마감 일자를 입력하세요 > ");
+		System.out.print("마감 일자를 입력하세요 (년도/월/일) > ");
 		due_date = sc.nextLine();
 		
 		TodoItem t = new TodoItem(title, desc, category, due_date);

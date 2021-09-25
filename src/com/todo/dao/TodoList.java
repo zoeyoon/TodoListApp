@@ -36,8 +36,6 @@ public class TodoList {
 	}
 
 	public void listAll() {
-		/*System.out.println("\n"
-				+ "inside list_All method\n");*/
 		for (TodoItem myitem : list) {
 			System.out.printf("%2d. [%s] %s - %s - %s - %s\n", list.indexOf(myitem)+1, myitem.getCategory(), myitem.getTitle(), myitem.getDesc(), myitem.getDue_date(), myitem.getCurrent_date());
 		}
