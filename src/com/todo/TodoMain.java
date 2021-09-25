@@ -21,7 +21,10 @@ public class TodoMain {
 		do {
 			Menu.prompt();
 			isList = false;
-			String choice = sc.next();
+			String input = sc.nextLine();
+			String[] arr = input.split(" ");
+			
+			String choice = arr[0];
 			switch (choice) {
 
 			case "add":
@@ -58,14 +61,47 @@ public class TodoMain {
 				System.out.println("\n========= 정렬-날짜 순 ==========");
 				isList = true;
 				break;
-
-			case "exit":
-				quit = true;
+				
+			case "ls_date_desc":
+				l.sortByDate();
+				l.reverseList();
+				System.out.println("\n========= 정렬-날짜 순 ==========");
+				isList = true;
 				break;
+			
+			case "ls_cate":
+				TodoUtil.listCate(l);
+				break;
+				
+			case "find":
+				try {
+					TodoUtil.findItem(l, arr[1]);
+					break;
+				}
+				catch (IndexOutOfBoundsException e) {
+					System.out.println("키워드 입력값 없음!");
+					break;
+				}
+				
+				
+			case "find_cate":
+				try {
+					TodoUtil.findCateItem(l, arr[1]);
+					break;
+				}
+				catch (IndexOutOfBoundsException e) {
+					System.out.println("키워드 입력값 없음!");
+					break;
+				}
+				
 				
 			case "help":
 				Menu.displaymenu();
 				System.out.println();
+				break;
+				
+			case "exit":
+				quit = true;
 				break;
 				
 			default:
